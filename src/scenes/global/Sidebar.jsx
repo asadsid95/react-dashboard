@@ -20,6 +20,9 @@ import MapOutlined from "@mui/icons-material/MapOutlined";
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  console.log(to);
+
   return (
     <MenuItem
       active={selected === title}
@@ -139,7 +142,7 @@ const Sidemenu = () => {
             />
             <Item
               title="Contacts Information"
-              to="/contants"
+              to="/contacts"
               icon={<ContactsOutlined />}
               selected={selected}
               setSelected={setSelected}
